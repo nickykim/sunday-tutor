@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>A simple user sign up form</title>
+<style type="text/css">
+
+#signup {width:500px; 
+		height:1070px;
+		font-size: 120%;
+		color: #5a5854;
+		background-color: #f2f2f2;
+		border: 5px solid #bdbdbd;
+		border-radius: 5px;
+		padding: 5px 5px 5px 5px;
+		background-repeat: no-repeat;
+		background-position: 8px 9px;
+		display: block;
+		margin-bottom: 10px;
+		margin-left:250px} /*전체 css 효과 준거 */
+		
+.submit {
+		width: 310px;
+		text-align: right;
+		color:#063;}
+
+ h3		{text-align: center;
+         text-transform: capitalize;
+         color:#03f;
+		 font-family:Georgia, "Times New Roman", Times, serif;}
+
+
+</style>
+</head>
+
+<body>
+
+<div id="signup"><!-- this is the whole form's name-->
+
+	<h3>Join! Leeken electronics</h3>
+
+	<form method="post" action="signupform.html">
+
+	<fieldset>
+   		 <legend> Tell us about you </legend><!--text-->
+        <p> Enter your Email:
+        <br>
+        <input type="text"name="username" size="20" maxlength="30"/>
+        </p>
+
+        <p> Password 
+        <br>
+        
+        <input type="password" name="password" size="20"maxlength="30"/>
+        </p>
+        
+        <!-- radio box랑 checkbox-->
+        <p>Please select your gender:
+        <br />
+        <input type="radio" name="male" value="male" checked="checked" />male
+        <input type="radio" name="female" value="female" />female</p>
+        
+        <p>Please select your favorite mobile company(s):
+        <br />
+        <input type="checkbox" name="company" value="Samsung" checked="checked" />Samsung
+        <input type="checkbox" name="company" value="Apple" /> Apple
+        <input type="checkbox" name="company" value="Motorora" />Motorora
+        </p>
+        
+        <input type="hidden" name="mobile" value="favorite mobile company" /><!-- hidden box-->
+        
+     </fieldset>
+
+    <fieldset>
+        <legend> Questions</legend>
+        
+            <p>Do you plan to buy any of these devices?<!--multiple dropdown-->
+            </p>
+            <select name="devices" size="5" multiple="multiple">
+                <option value="Mobile" selected="selected"> Mobile</option>
+                <option value="Tv">Tv</option>
+                <option value="computer" selected="selected">computer</option>
+                <option value="Headphone">Headphone</option>
+            </select>
+            
+            <p>How often do you listen to music?</p><!--single dropdown-->
+            <select name="often">
+                <option value="Everyday">Everyday</option>
+                <option value="Once a week">Once a week</option>
+                <option value="None">None</option>
+            </select>
+            <br>
+            
+            <p>Upload your song in your mobile:</p><!--file upload-->
+            <input type="file" name="song" /><br />
+            <br>
+    </fieldset>
+
+<fieldset>
+        <legend> Comments</legend>
+        
+            <label for="comments">Comments
+                <br />
+                    <textarea rows="3" cols="30" id="comments">
+                    </textarea>
+            </label><!--label-->
+
+</fieldset>
+
+
+
+ 	<div class="submit"><input type="submit" value="Submit" /></div>
+</form>
+
+
+</body>
+</html>
