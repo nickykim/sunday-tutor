@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<title>fancy box</title>
+	<style type="text/css">
+    img{width: 150px;
+    	 height:100px;
+    }
+    h1{
+    	text-align: center;
+    }
+    .cafe{
+    	width: 310px;
+    	border:5px solid white;
+    	margin:100px auto;
+    }
+    #single1,#single2,#single3,#single4{
+    	width:100px;
+    	height:50px;
+    }
+    body{
+    	background:url(bg.jpg) no-repeat 0 0;
+    	background-size: 100%;
+
+    }
+
+
+
+	</style>
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+	<!-- Optionally add helpers - button, thumbnail and/or media -->
+	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+
+		
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+	    $("#single_1").fancybox({
+	          helpers: {
+	              title : {
+	                  type : 'float'
+	              }
+	          }
+	      });
+
+	    $("#single_2").fancybox({
+	    	openEffect	: 'elastic',
+	    	closeEffect	: 'elastic',
+
+	    	helpers : {
+	    		title : {
+	    			type : 'inside'
+	    		}
+	    	}
+	    });
+
+	    $("#single_3").fancybox({
+	    	openEffect : 'none',
+	    	closeEffect	: 'none',
+	    	helpers : {
+	    		title : {
+	    			type : 'outside'
+	    		}
+	    	}
+	    });
+
+	    $("#single_4").fancybox({
+	    	helpers : {
+	    		title : {
+	    			type : 'over'
+	    		}
+	    	}
+	    });
+	});
+
+    </script>
+</head>
+<body>
+   	<div class="cafe">
+   	    <h1> Fancy box</h1>
+		<a id="single_1" href="1.jpg" title="cafe1">
+			<img src="1.jpg" alt="" />
+		</a>
+		<a id="single_2" href="2.jpg" title="cafe2">
+			<img src="2.jpg" alt="" />
+		</a>
+		<a id="single_3" href="3.jpg" title="cafe3">
+			<img src="3.jpg" alt="" />
+		</a>
+		<a id="single_4" href="5.jpg" title="cafe4">
+			<img src="5.jpg" alt="" />
+		</a>
+ </div>
+</body>
+</html>
